@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+input:checked+li {
+    text-decoration: line-through;
+    text-decoration-color: #A683E3;
+  }
+  
+  input[type="checkbox"] {
+    margin: 10px;
+  }
