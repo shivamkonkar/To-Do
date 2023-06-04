@@ -12,6 +12,7 @@ let NEWITEM =[];
 
 app.get("/", function(req,res){
 
+
     let options = {
         weekday: "long",
         month: "long",
@@ -24,9 +25,19 @@ app.get("/", function(req,res){
     res.render("index",{'date': DATE,'newitem': NEWITEM})
 })
 
-app.post("/", function(req, res){
-    NEWITEM.push(req.body.task);
+
+
+
+app.post("/add", function(req, res){
     
+    NEWITEM.push(req.body.code)
+    res.redirect("/")
+
+})
+
+app.post("/removeAll", function(req, res){
+    
+    NEWITEM = []
     res.redirect("/")
 
 })
